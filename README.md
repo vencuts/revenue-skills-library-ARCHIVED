@@ -1,3 +1,25 @@
+> # ⚠️ ARCHIVED — Snapshot from April 2026
+>
+> **This repo is no longer maintained.** It was a personal mirror containing 29 skills as of April 2026.
+>
+> ### 👉 The live library has 167+ skills and is updated daily
+>
+> **For Shopifolk:**
+> - **Repo:** [`shopify-playground/revenue-skills`](https://github.com/shopify-playground/revenue-skills) — daily updates, ~25 contributors
+> - **Pi install:** `pi install https://github.com/shopify-playground/revenue-skills`
+> - **Claude Code install:** clone the repo + `cp -r skills/<name> ~/.claude/skills/`
+> - **Submissions:** [`#revenue-skills-submissions`](https://shopify.slack.com/archives/revenue-skills-submissions) on Slack
+>
+> **For non-Shopifolk:**
+> - Browse: [sales-skill-lib.quick.shopify.io](https://sales-skill-lib.quick.shopify.io) (Shopify-internal — auth required)
+> - Methodology writeup: [Vault #366966](https://vault.shopify.io/posts/366966) (Shopify-internal)
+>
+> **Why archived:** This repo was originally created (March 2026) to share early skills with [Hilary Horner's](https://shopify.slack.com/team/U018PU61X1S) team while we set up the proper home in `shopify-playground`. The live repo has surpassed it 5×.
+>
+> _Last sync: April 2, 2026. Archived: May 8, 2026._
+
+---
+
 # Revenue Skills Library
 
 **29 AI skills for Shopify sales teams**, mapped across the full merchant journey — from prospecting to expansion.
