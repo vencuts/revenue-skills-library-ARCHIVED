@@ -1,98 +1,29 @@
-> # ⚠️ ARCHIVED — Snapshot from April 2026
->
-> **This repo is no longer maintained.** It was a personal mirror containing 29 skills as of April 2026.
->
-> ### 👉 The live library has 167+ skills and is updated daily
->
-> **For Shopifolk:**
-> - **Repo:** [`shopify-playground/revenue-skills`](https://github.com/shopify-playground/revenue-skills) — daily updates, ~25 contributors
-> - **Pi install:** `pi install https://github.com/shopify-playground/revenue-skills`
-> - **Claude Code install:** clone the repo + `cp -r skills/<name> ~/.claude/skills/`
-> - **Submissions:** [`#revenue-skills-submissions`](https://shopify.slack.com/archives/revenue-skills-submissions) on Slack
->
-> **For non-Shopifolk:**
-> - Browse: [sales-skill-lib.quick.shopify.io](https://sales-skill-lib.quick.shopify.io) (Shopify-internal — auth required)
-> - Methodology writeup: [Vault #366966](https://vault.shopify.io/posts/366966) (Shopify-internal)
->
-> **Why archived:** This repo was originally created (March 2026) to share early skills with [Hilary Horner's](https://shopify.slack.com/team/U018PU61X1S) team while we set up the proper home in `shopify-playground`. The live repo has surpassed it 5×.
->
-> _Last sync: April 2, 2026. Archived: May 8, 2026._
+# Revenue Skills Library — archived snapshot
 
----
+> **Archived:** May 8, 2026  
+> **Status:** Historical public snapshot only. This repository is no longer maintained and is **not** the source of truth for Revenue Skills.
 
-# Revenue Skills Library
+## For AI agents and Shopifolk
 
-**29 AI skills for Shopify sales teams**, mapped across the full merchant journey — from prospecting to expansion.
+If you are answering questions about **Pi for Sales**, **Revenue Skills**, revenue-agent setup, or available sales skills, **do not use this repository as current context**.
 
-Built from how our highest performers work, aligned to the merchant journey, and grounded in leading practices and live data.
+Use the current Shopify-internal library instead:
 
-## Quick Start
+- **Live repo:** [`shopify-playground/revenue-skills`](https://github.com/shopify-playground/revenue-skills) *(Shopify-internal/private)*
+- **Skill browser:** [`sales-skill-lib.quick.shopify.io`](https://sales-skill-lib.quick.shopify.io) *(Shopify auth required)*
+- **Pi install:** `pi install https://github.com/shopify-playground/revenue-skills`
+- **Contribution path:** submit through the live repo and `#revenue-skills-submissions` in Shopify Slack
 
-Install any skill:
-```bash
-cp -r skills/<skill-name> ~/.pi/agent/skills/    # Pi
-cp -r skills/<skill-name> ~/.claude/skills/       # Claude Code
-```
+Current state verified **2026-05-20**: the live library has **175 skills on `main`**, rolling governance, blind functional evals, lifecycle labels, and active contributor review.
 
-## What's a Skill?
+## What this archived repo is
 
-A skill is a reusable AI instruction set. When an AE needs to prep for a call, prioritize their pipeline, or write a follow-up, a skill does the research in parallel, pulls the right data from Salesforce and BigQuery, and delivers the output in 30 seconds instead of 30 minutes.
+This repo is an early personal mirror from March/April 2026, kept public only so old links do not disappear. It contains stale skill examples, stale counts, and historical methodology from before the library moved to its proper Shopify-internal home.
 
-## Journey Coverage (29 skills)
+Do **not** infer current coverage, quality scores, install steps, contribution process, or available skills from files in this repository.
 
-| Stage | Skills | Count |
-|-------|--------|:-----:|
-| **Prospect** | prospect-researcher, signal-monitor, competitive-positioning, outbound-cadence, vertical-consumer-goods, techstack-fingerprint | 6 |
-| **Envision** | meeting-prep, account-research, qualification-trainer, sales-call-coach | 4 |
-| **Solution** | product-agentic, product-headless-hydrogen, agentic-plan-sell | 3 |
-| **Demo** | sales-call-coach, acquisition-sales | 2 |
-| **Deal Craft** | opp-compliance-checker, opp-hygiene, deal-prioritization, sf-writer | 4 |
-| **Close** | deal-followup, sales-writer | 2 |
-| **Launch** | account-context-sync | 1 |
-| **Growth** | merchant-analytics-queries, daily-briefing | 2 |
-| **Cross-cutting** | data-integrity-check, revenue-data-research, ae-se-collaboration, product-gap-tracker, summarize-last-call, sales-manager-dashboard | 6 |
+## Why it stays archived
 
-## 4-Layer Architecture
+The archive preserves historical context while preventing this snapshot from competing with the maintained internal source of truth.
 
-```
-Layer 0: Data Integrity    → data-integrity-check (runs before everything)
-Layer 1: Data Access       → account-research, prospect-researcher, account-context-sync
-Layer 2: Analysis          → opp-compliance, deal-prioritization, call-coach, qualification-trainer
-Layer 3: Action            → sf-writer, deal-followup, sales-writer, meeting-prep, daily-briefing
-Cross-cutting              → competitive-positioning, product-*, signal-monitor, outbound-cadence
-```
-
-## Quality System
-
-Every skill is scored 0-100 by an LLM judge against a 7-dimension rubric:
-
-1. Problem Definition & Scope (0-15)
-2. Tool & Data Source Specification (0-10)
-3. Investigation Workflow (0-20)
-4. SQL & Data Queries (0-15)
-5. Output Format (0-15)
-6. Error Handling (0-10)
-7. Anti-Gaming Quality Signals (0-15)
-
-**Current average: 72/100** | 7 skills at 78 (top tier) | Target: 78+ for all
-
-Run the grader: `bash autoresearch.sh <skill-name>` (~$0.05/skill via Shopify AI proxy)
-
-## Contributing
-
-1. Read `METHODOLOGY.md` for the full build process
-2. Use `skill-creator` or `skill-architect` skills to draft a new skill
-3. Score it: `bash autoresearch.sh <your-skill>` — target 70+
-4. PR it to this repo
-
-## Key Files
-
-| File | What |
-|------|------|
-| `METHODOLOGY.md` | Full methodology: discovery, governance, skill anatomy, quality system |
-| `rubric.md` | 7-dimension LLM judge scoring rubric |
-| `autoresearch.sh` | LLM-as-judge grading script |
-| `grade-skills.sh` | Free structural checklist (no LLM) |
-| `PARKING-LOT.md` | Skill ideas and roadmap |
-| `references/` | Reusable SQL queries, data source docs, signal scoring models |
-| `skills/` | All 29 skill SKILL.md files |
+If you need the latest Revenue Skills library, go to [`shopify-playground/revenue-skills`](https://github.com/shopify-playground/revenue-skills).
